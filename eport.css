@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono:wght@300;400;500;700&display=swap');
+
+/* Default setting*/
+*{
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4.h5,h6,span{
+    color: #242424;
+    text-align: center;
+    line-height: 1.25;
+}
+
+p{
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/*Navigation Bar*/
+nav{
+    height: 100px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Makes the lists format in a horizontal direction and removes the bullet points*/
+.nav_list{
+    display: flex;
+    list-style-type: none;
+
+}
+
+/* For the lists used in the navigations bars*/
+.nav__link--anchor{
+    margin: 0 12px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* For the contact button*/
+.nav__link--anchor-primary{
+    background-color: #6030b1;
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: white;
+    transition: all 300ms ease;
+
+}
+
+/*Makes the button change to a lighter purple when the mouse hovers over "contact"*/
+.nav__link--anchor-primary:hover{
+    background-color:#5d3eff ;
+}
+
+/*For the name on the top left corner*/
+.my_logo{
+    font-weight:bold;
+    font-size: 24px;
+    color:#6030b1 ;
+    margin: 0 12px;
+}
+
+/* About me section*/
+
+#about-me{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+.flex-1{
+    flex: 1;
+}
+
+.flex{
+    display: flex;
+}
+
+.about-me__info--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.row{
+    width: 100%;
+    max-width: 800px;
+}
+.about-me__picture--mask{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0, 0,0.16);
+}
+.about-me__picture{
+    width: 100%;
+    transform: scale(1.5);
+    padding-bottom: 100px;
+}
+
+.text-purple{
+    color: #6030b1;
+}
+h1{
+    font-size: 36px;
+}
+.about-me__info--para{
+    font-size: 20px;
+    margin-bottom: 28px;
+}
+.spacing_para{
+    text-align: center;
+    margin-top: 16px;
+    max-width: 700px;
+    margin-left: 16px;
+}
+
+/* For all the links */
+ .linkedin{
+    width: 100%;
+    max-width: 20px;
+    height: 20px;
+ }
+ .github{
+width: 100%;
+max-width: 20px;
+height: 20px;
+ }
+ .gmail{
+    width: 100%;
+    max-width: 20px;
+    height: 20px;
+ }
+ .resume{
+    width: 100%;
+    width: 20px;
+    height: 20px;
+ }
+
+ /* Used to get the spacing for the links*/
+ .links_spacing{
+    margin-left: 25px;
+    
+ }
+
+ .about-me__img--container{
+    margin-top: 120px;
+   
+ }
+
+section:nth-child(even){
+    background-color: #f8f8f8;
+}
+
+.container{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.section__title{
+    margin-bottom: 20px;
+}
+
+.language__img{
+    width: 100%;
+    max-width: 100px;
+    transition: all 300ms ease;
+    
+}
+
+.language:hover .language__img{
+    filter: brightness(80%);
+    opacity: 0.86;
+    transform: scale(0.9);
+}
+
+.language_img--wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px;
+}
+
+.language{
+    width: 25%;
+    position: relative;
+}
+.language-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.language__name{
+    position: absolute;
+    bottom: 0;
+    padding-left: 76px;
+    transform: scale(0);
+    transition: all 300ms ease;
+}
+.language:hover .language__name{
+    transform: scale(1);
+}
+
+.project__img{
+    width: 100%;
+    transition: all 300ms ease;
+}
+
+.project__wrapper{
+    display: flex;
+    box-shadow: 0 20px 80px rgba(0,0, 0,0.45);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project__wrapper::before{
+    content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background-color: #1c1d25;
+ opacity: 0;
+ transition: all 300ms ease;
+}
+.project:hover .project__wrapper:before{
+    opacity: 0.7;
+}
+.project:hover .project__img{
+    transform: scale(1.07);
+    filter: blur(5px);
+}
+
+.project__list{
+    padding-top: 40px;
+}
+
+.project:hover .project__description{
+    text-align: center;
+    position:absolute ;
+    left: 90px;
+    top: 50%;
+    max-width: 550px;
+    transform: translateY(-50%);
+}
+
+.project__description{
+    font-size: 30px;
+    transition: all 300ms ease;
+}
+
+.project{
+    margin-bottom: 135px;
+}
+
+.project:last-child{
+    margin-bottom: 40px;
+}
+
+footer{
+    background-color: black;
+}
+
+.logo_img_footer{
+    width: 70px;
+    height: 70px;
+}
+.footer__row{
+    display: flex;
+    justify-content: space-between;
+    padding: 8% 0;
+}
+
+.footer__social--list{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer__social--link {
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
